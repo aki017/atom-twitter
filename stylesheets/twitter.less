@@ -9,8 +9,10 @@
   .main-container {
     width: 240px;
     padding: 0;
+    position: fixed;
   }
   .tweets-list {
+    margin-top: 26px;
     width: 240px;
     overflow: hidden;
     div {
@@ -18,12 +20,33 @@
       height: 48px;
       overflow: hidden;
       border-bottom: solid 2px @overlay-border-color;
-      img {
+      .icon {
         width: 48px;
         height: 48px;
         float: left;
         border-radius: 8px;
+        position: relative;
+
+        &:hover:after {
+          opacity: 1;
+        }
+        &:after {
+          content: "★";
+          display: block;
+          font-size: 32px;
+          color:#ffd700;
+          text-shadow: 0px 0px 5px #FFFF00;
+          width: 48px;
+          height: 48px;
+          top: 0px;
+          left: 0px;
+          text-align: center;
+          background: rgba(0,0,0,0.5);
+          opacity: 0;
+          position: absolute;
+        }
       }
+
       p {
         border-radius: 8px;
         float: left;
@@ -31,6 +54,7 @@
         height: 48px;
         min-height: 48px;
         margin: 0px;
+        padding: 3px;
       }
     }
   }
