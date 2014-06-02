@@ -1,0 +1,18 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable twitter': 'twitter:toggle'
+      'Enable twitter timeline': 'twitter:timeline:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'twitter'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'twitter:toggle' }
+        { 'label': 'Toggle Timeline', 'command': 'twitter:timeline:toggle' }
+      ]
+    ]
+  }
+]
